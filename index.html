@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Directory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student Directory Management</h1>
+    <button onclick="toggleForm()">Add New Student</button>
+
+    <div id="studentForm" style="display:none;">
+        <h2>Add Student</h2>
+        <form id="form" onsubmit="addStudent(event)">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="year" placeholder="Year" required>
+            <input type="text" id="program" placeholder="Program" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Program</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="studentList"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
